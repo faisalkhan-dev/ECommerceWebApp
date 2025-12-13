@@ -1,8 +1,9 @@
 spring:
   datasource:
-    username: root
-    url: jdbc:mysql://localhost:3306/ecom_project?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-    password: Khan@786
+    url: jdbc:mysql://${MYSQLHOST}:${MYSQLPORT}/${MYSQLDATABASE}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: ${MYSQLUSER}
+    password: ${MYSQLPASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     properties:
       hibernate:
@@ -27,3 +28,8 @@ server:
 #  username: spring
 #  url: jdbc:mysql://localhost:3306/web_store_test?useSSL=false
 #  password: spring
+
+#  datasource:
+#    username: root
+#    url: jdbc:mysql://localhost:3306/ecom_project?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+#    password: Khan@786g
