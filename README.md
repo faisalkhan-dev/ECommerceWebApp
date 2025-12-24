@@ -1,9 +1,13 @@
 # ![icon](https://user-images.githubusercontent.com/71443826/190462552-83a4263b-f2d2-4814-a6c0-850dc89438d2.png)SENKO Web Store
 
-## SCREENSHOTS
+## VIDEO
 
-https://github.com/user-attachments/assets/e379c0dd-c0cd-41a7-97d8-ac3abae54a44
+https://github.com/user-attachments/assets/5b252f0b-7d08-4e1e-95a3-c44267fcf67b
+
+
 <br/> <br/> <br/>
+
+## SCREENSHOTS
 
 <img width="1435" height="818" alt="Screenshot 2025-12-24 142134" src="https://github.com/user-attachments/assets/d82d03ff-4838-4c7b-b1d5-6562f58b0863" />
 <br/> <br/> <br/>
