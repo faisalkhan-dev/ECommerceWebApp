@@ -91,8 +91,8 @@ public class OrderController {
 
         String shipping = order.getShippingType() == 0 ? "Ukr poshta" : "Nova poshta";
 
-        String subject = "Thank you for ordering in QUICKMART";
-        String senderName = "QUICKMART Store";
+        String subject = "Thank you for ordering in SENKO";
+        String senderName = "SENKO Store";
         String mailContent = "<p><b>Order number:</b> " + order.getId() + "</p>";
         mailContent += "<p><b>Payment:</b> " + order.getOrderStatus() + "</p>";
         mailContent += "<p><b>Shipping:</b> " + shipping + "</p>";
@@ -105,7 +105,7 @@ public class OrderController {
         MimeMessage message = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true);
 
-        helper.setFrom("quickmart@outlook.com", senderName);
+        helper.setFrom("senko@outlook.com", senderName);
         helper.setTo(order.getUser().getEmail());
         helper.setSubject(subject);
         helper.setText(mailContent, true);

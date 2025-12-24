@@ -11,8 +11,8 @@ spring:
   mail:
     host: smtp-mail.outlook.com
     port: 587
-    username: senkoShop@outlook.com
-    password: Midostar10035
+    username: senko@outlook.com
+    password: senko
     properties:
       mail:
         smtp:

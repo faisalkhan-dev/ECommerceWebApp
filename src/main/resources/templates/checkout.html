@@ -110,7 +110,7 @@
                 <div class="mb-3 ml-4">
                     <label for="address">[[#{checkout.address}]]</label>
                     <input style="width: 300px;" th:field="*{address}" type="text" class="form-control" id="address"
-                           placeholder="Druby Narodiv str." required>
+                           placeholder="Near JSS Noida Sec 62" required>
                     <div class="invalid-feedback">
                         [[#{checkout.errorAddress}]]
                     </div>
@@ -119,7 +119,7 @@
                 <div class="mb-3 ml-4">
                     <label for="city">[[#{checkout.city}]]</label>
                     <input style="width: 300px;" th:field="*{city}" type="text" class="form-control" id="city"
-                           placeholder="Kharkiv"
+                           placeholder="Noida"
                            required>
                     <div class="invalid-feedback">
                         [[#{checkout.errorCity}]]
@@ -128,14 +128,14 @@
                 <h6>[[#{checkout.chooseDelivery}]]</h6>
                 <div class="d-block my-3">
                     <div class="custom-control custom-radio ml-4">
-                        <input th:field="*{shippingType}" id="ukrPoshta" name="deliveryMethod" type="radio" class="custom-control-input"
+                        <input th:field="*{shippingType}" id="IndiaPost" name="deliveryMethod" type="radio" class="custom-control-input"
                                required th:value="0">
-                        <label class="custom-control-label" for="ukrPoshta">[[#{checkout.ukrPoshta}]]</label>
+                        <label class="custom-control-label" for="IndiaPost">[[#{checkout.IndiaPost}]]</label>
                     </div>
                     <div class="custom-control custom-radio ml-4">
-                        <input th:field="*{shippingType}" id="novaPoshta" name="deliveryMethod" type="radio" class="custom-control-input"
+                        <input th:field="*{shippingType}" id="BlueDart" name="deliveryMethod" type="radio" class="custom-control-input"
                                required th:value="1">
-                        <label class="custom-control-label" for="novaPoshta">[[#{checkout.novaPoshta}]]</label>
+                        <label class="custom-control-label" for="BlueDart">[[#{checkout.BlueDart}]]</label>
                     </div>
                 </div>
                 <hr class="mb-4">

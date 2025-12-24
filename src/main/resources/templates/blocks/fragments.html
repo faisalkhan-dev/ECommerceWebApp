@@ -102,20 +102,30 @@
                 </li>
                 <!--GitHub, linked ect icons-->
                 <li class="nav-item">
-                    <a href="https://github.com/SEM24" class="nav-link waves-effect rounded">
+                    <a href="https://github.com/faisalkhan-dev" class="nav-link waves-effect rounded">
                         <span class="fab fa-github"></span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://www.linkedin.com/in/samir-homsi-kak" class="nav-link waves-effect rounded">
+                    <a href="https://www.linkedin.com/in/faisalkhan10" class="nav-link waves-effect rounded">
                         <span class="fab fa-linkedin"></span>
                     </a>
                 </li>
-                <div class="language_selector">
-                    <a class="custom_link waves-effect rounded" th:href="@{'?lang=en'}">EN</a>
-                    <div class="vertical-line" style="height: 25px;"></div>
-                    <a class="custom_link waves-effect rounded" th:href="@{'?lang=uk'}">UA</a>
+
+<!--                <div class="language_selector">-->
+<!--                    <a class="custom_link waves-effect rounded" th:href="@{'?lang=en'}">EN</a>-->
+<!--                    <div class="vertical-line" style="height: 25px;"></div>-->
+<!--                    <a class="custom_link waves-effect rounded" th:href="@{'?lang=hi'}">UA</a>-->
+<!--                </div>-->
+
+                <div class="language_selector" style="display:flex; align-items:center;">
+                    <a class="custom_link waves-effect rounded"
+                       th:href="@{'?lang=en'}"
+                       style="line-height:1.8;">
+                        EN
+                    </a>
                 </div>
+
             </ul>
         </div>
     </div>
@@ -177,12 +187,12 @@
                 </li>
                 <!--GitHub, linked ect icons-->
                 <li class="nav-item">
-                    <a href="https://github.com/SEM24" class="nav-link waves-effect rounded">
+                    <a href="https://github.com/faisalkhan-dev" class="nav-link waves-effect rounded">
                         <span class="fab fa-github"></span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://www.linkedin.com/in/samir-homsi-kak" class="nav-link waves-effect rounded">
+                    <a href="https://www.linkedin.com/in/faisalkhan10" class="nav-link waves-effect rounded">
                         <span class="fab fa-linkedin"></span>
                     </a>
                 </li>
@@ -209,16 +219,16 @@
             <!--Grid column-->
             <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
                 <h5 class="text-uppercase mb-4">[[#{footer.titleAbout}]]</h5>
-                <p><strong>QUICKMART</strong> [[#{footer.textAbout}]]</p>
+                <p><strong>SENKO</strong> [[#{footer.textAbout}]]</p>
 
                 <!-- Social icons-->
                 <div class="mt-4">
                     <!--GitHub-->
-                    <button onclick="location.href='https://github.com/SEM24'" type="button"
+                    <button onclick="location.href='https://github.com/faisalkhan-dev'" type="button"
                             class="btn btn-circle btn-md">
                         <em class="fab fa-github fa-lg"></em></button>
                     <!-- Linkedin -->
-                    <button onclick="location.href='https://www.linkedin.com/in/samir-homsi-kak'" type="button"
+                    <button onclick="location.href='https://www.linkedin.com/in/faisalkhan10'" type="button"
                             class="btn btn-circle btn-md">
                         <em class="fab fa-linkedin fa-lg"></em></button>
                 </div>
@@ -235,7 +245,7 @@
                     </li>
                     <li class="mb-3">
                         <span class="fa-li"><em class="fas fa-envelope"></em></span><span
-                            class="ms-2">quickmart@outlook.com</span>
+                            class="ms-2">senko@outlook.com</span>
                     </li>
                     <li class="mb-3">
                         <span class="fa-li"><em class="fas fa-phone"></em></span><span
@@ -258,7 +268,7 @@
 
     <!-- Copyright -->
     <div class="text-center copyright p-3">
-        <span class="credit">[[#{footer.created}]] <a href="https://github.com/SEM24">SEM</a> | </span>
+        <span class="credit">[[#{footer.created}]] <a href="https://github.com/faisalkhan-dev">SEM</a> | </span>
         <span class="far fa-copyright"></span><span> [[#{footer.copyright}]]</span>
     </div>
 </footer>
@@ -363,7 +373,7 @@ but can be also used in another admin pages if you modify code to sort and searc
 <!--Addition footer for checkout and admin-->
 <div th:fragment="additional_footer" class="text-center copyright mt-5 p-4">
     <hr/>
-    <span class="credit">[[#{footer.created}]] <a href="https://github.com/SEM24">SEM</a> | </span>
+    <span class="credit">[[#{footer.created}]] <a href="https://github.com/faisalkhan-dev">SEM</a> | </span>
     <span class="far fa-copyright"></span><span> [[#{footer.copyright}]]</span>
 </div>
 
