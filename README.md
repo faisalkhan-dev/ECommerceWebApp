@@ -21,12 +21,33 @@ https://github.com/user-attachments/assets/5b252f0b-7d08-4e1e-95a3-c44267fcf67b
 <img width="1845" height="862" alt="Screenshot 2025-12-24 142238" src="https://github.com/user-attachments/assets/bac87f55-fd23-4a02-8a64-f95f9ae12200" />
 <br/> <br/> <br/>
 
-
-
-
+<img width="1835" height="855" alt="Screenshot 2025-12-25 111312" src="https://github.com/user-attachments/assets/b4a195ff-2ee3-4673-bd5e-069da1dd9f7a" />
+<br/> <br/> <br/>
+<img width="1834" height="869" alt="Screenshot 2025-12-25 111256" src="https://github.com/user-attachments/assets/a16ecf02-d6e8-4147-97d7-ab1beb11f6c6" />
+<br/> <br/> <br/>
+<img width="1861" height="857" alt="Screenshot 2025-12-25 111216" src="https://github.com/user-attachments/assets/b9d3f41c-c6af-4a2e-bae6-6cf3243b9abf" />
+<br/> <br/> <br/>
+<img width="1836" height="857" alt="Screenshot 2025-12-25 111155" src="https://github.com/user-attachments/assets/be916cd0-059c-4716-a2fb-ae9398dc42df" />
+<br/> <br/> <br/>
+<img width="1855" height="858" alt="Screenshot 2025-12-25 111144" src="https://github.com/user-attachments/assets/1d997f6e-577d-4e19-8784-111a4e5e3084" />
+<br/> <br/> <br/>
+<img width="1860" height="846" alt="Screenshot 2025-12-25 111110" src="https://github.com/user-attachments/assets/ea030080-081e-4ef9-819a-c22a5d12957f" />
 
 
 This E-commerce project built on Spring Boot & Thymeleaf.<br>
+
+-> Update your MySQL configuartion in application.yml
+> Run this command to add admin in your MySQl
+>   INSERT INTO user (email, login, password, role)
+    VALUES (
+    'admin@quickmart.com',
+    'admin123',
+    '$2a$10$Ki5MnsgG/sGOE.jYo8fVuOmwIGsFH2FFt5TIkYr..KX25iCLHA69y',
+    'ADMIN'
+);
+> Now you can login as admin
+   username-> admin123
+   password->admin123
 
 ## Used Technologies:
 
