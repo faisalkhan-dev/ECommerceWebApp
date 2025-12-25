@@ -56,8 +56,8 @@ public class OrderController {
             model.addAttribute("order", new Order());
             model.addAttribute("user", user);
             model.addAttribute("orderBaskets", orderBaskets);
-            model.addAttribute("waiting", OrderType.Ожидание);
-            model.addAttribute("payed", OrderType.Оплачено);
+            model.addAttribute("waiting", OrderType.Pending);
+            model.addAttribute("payed", OrderType.Paid);
         } else {
             model.addAttribute("error", new NotFoundException("Orders for payment was not found"));
             return "/error/404";
@@ -89,7 +89,7 @@ public class OrderController {
     private void sendVerificationEmail(Order order)
             throws MessagingException, UnsupportedEncodingException {
 
-        String shipping = order.getShippingType() == 0 ? "Ukr poshta" : "Nova poshta";
+        String shipping = order.getShippingType() == 0 ? "India Post" : "Blue Dart";
 
         String subject = "Thank you for ordering in SENKO";
         String senderName = "SENKO Store";

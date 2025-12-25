@@ -781,7 +781,7 @@ public class OrderController {
     private void sendVerificationEmail(Order order)
             throws MessagingException, UnsupportedEncodingException {
 
-        String shipping = order.getShippingType() == 0 ? "Ukr poshta" : "Nova poshta";
+        String shipping = order.getShippingType() == 0 ? "India Post" : "Blue Dart";
 
         String subject = "Thank you for ordering in SENKO";
         String senderName = "SENKO Store";
@@ -2923,8 +2923,8 @@ checkout.address=Address:
 checkout.errorAddress= Please enter your shipping address.
 checkout.city=City:
 checkout.errorCity=Please enter your city.
-checkout.ukrPoshta=Ukr poshta
-checkout.novaPoshta=Nova poshta
+checkout.IndiaPost=India post
+checkout.BlueDart=Blue Dart
 checkout.paymentTitle=Payment
 checkout.paymentFirst=Pay in local store
 checkout.paymentSecond=Pay by card
@@ -22388,7 +22388,7 @@ but can be also used in another admin pages if you modify code to sort and searc
                             <td>Nova poshta</td>
                         </div>
                         <div th:if="${order.shippingType} eq '0'">
-                            <td>Ukr poshta</td>
+                            <td>Overnight Shipping</td>
                         </div>
                         <td th:text="${order?.city}"></td>
                         <td th:text="${order?.address}"></td>
