@@ -34,6 +34,6 @@ build/
 /src/main/resources/sql/WebShopDB.mwb.bak
 /.mvn/
 /.jpb/
-src/main/java/com/khomsi/site_project/notesToFix.html
+src/main/java/com/project/ecom/notesToFix.html
 
 /src/main/resources/sql/WebShop_old.mwb

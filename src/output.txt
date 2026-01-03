@@ -55,7 +55,7 @@ public class WebConfig implements WebMvcConfigurer {
 // main\java\com\khomsi\site_project\configuration\WebSecurityConfig.java
 package com.khomsi.site_project.configuration;
 
-import com.khomsi.site_project.entity.Role;
+import entity.com.project.ecom.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -114,10 +114,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 package com.khomsi.site_project.controller;
 
 import com.khomsi.site_project.entity.*;
-import com.khomsi.site_project.exception.CategoryNotFoundException;
-import com.khomsi.site_project.exception.OrderNotFoundException;
-import com.khomsi.site_project.exception.ProductNotFoundException;
-import com.khomsi.site_project.exception.UserNotFoundException;
+import exception.com.project.ecom.CategoryNotFoundException;
+import exception.com.project.ecom.OrderNotFoundException;
+import exception.com.project.ecom.ProductNotFoundException;
+import exception.com.project.ecom.UserNotFoundException;
 import com.khomsi.site_project.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -579,10 +579,10 @@ public class AdminTools {
 package com.khomsi.site_project.controller;
 
 import com.khomsi.site_project.entity.*;
-import com.khomsi.site_project.exception.ProductNotFoundException;
-import com.khomsi.site_project.repository.CategoryRepository;
-import com.khomsi.site_project.service.ProductService;
-import com.khomsi.site_project.service.UserService;
+import exception.com.project.ecom.ProductNotFoundException;
+import repository.com.project.ecom.CategoryRepository;
+import service.com.project.ecom.ProductService;
+import service.com.project.ecom.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -692,12 +692,12 @@ public class MainController {
 // main\java\com\khomsi\site_project\controller\OrderController.java
 package com.khomsi.site_project.controller;
 
-import com.khomsi.site_project.entity.Order;
-import com.khomsi.site_project.entity.OrderBasket;
-import com.khomsi.site_project.entity.OrderType;
-import com.khomsi.site_project.entity.User;
-import com.khomsi.site_project.service.OrdersService;
-import com.khomsi.site_project.service.UserService;
+import entity.com.project.ecom.Order;
+import entity.com.project.ecom.OrderBasket;
+import entity.com.project.ecom.OrderType;
+import entity.com.project.ecom.User;
+import service.com.project.ecom.OrdersService;
+import service.com.project.ecom.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -812,12 +812,12 @@ public class OrderController {
 // main\java\com\khomsi\site_project\controller\ProductController.java
 package com.khomsi.site_project.controller;
 
-import com.khomsi.site_project.entity.Category;
-import com.khomsi.site_project.entity.Product;
-import com.khomsi.site_project.exception.CategoryNotFoundException;
-import com.khomsi.site_project.exception.ProductNotFoundException;
-import com.khomsi.site_project.service.CategoryService;
-import com.khomsi.site_project.service.ProductService;
+import entity.com.project.ecom.Category;
+import entity.com.project.ecom.Product;
+import exception.com.project.ecom.CategoryNotFoundException;
+import exception.com.project.ecom.ProductNotFoundException;
+import service.com.project.ecom.CategoryService;
+import service.com.project.ecom.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.repository.query.Param;
@@ -922,9 +922,9 @@ public class ProductController {
 // main\java\com\khomsi\site_project\controller\ShoppingCartRestController.java
 package com.khomsi.site_project.controller;
 
-import com.khomsi.site_project.entity.User;
-import com.khomsi.site_project.service.OrderBasketService;
-import com.khomsi.site_project.service.UserService;
+import entity.com.project.ecom.User;
+import service.com.project.ecom.OrderBasketService;
+import service.com.project.ecom.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -993,9 +993,9 @@ public class ShoppingCartRestController {
 // main\java\com\khomsi\site_project\controller\UserController.java
 package com.khomsi.site_project.controller;
 
-import com.khomsi.site_project.entity.User;
-import com.khomsi.site_project.entity.UserInfo;
-import com.khomsi.site_project.service.UserService;
+import entity.com.project.ecom.User;
+import entity.com.project.ecom.UserInfo;
+import service.com.project.ecom.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -1600,7 +1600,7 @@ public class UserNotFoundException extends Exception {
 // main\java\com\khomsi\site_project\repository\CategoryRepository.java
 package com.khomsi.site_project.repository;
 
-import com.khomsi.site_project.entity.Category;
+import entity.com.project.ecom.Category;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -1635,7 +1635,7 @@ public interface CategoryRepository extends JpaRepository<Category, Integer> {
 // main\java\com\khomsi\site_project\repository\DeliveryRepository.java
 package com.khomsi.site_project.repository;
 
-import com.khomsi.site_project.entity.Delivery;
+import entity.com.project.ecom.Delivery;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface DeliveryRepository extends JpaRepository<Delivery, Integer> {
@@ -1644,9 +1644,9 @@ public interface DeliveryRepository extends JpaRepository<Delivery, Integer> {
 // main\java\com\khomsi\site_project\repository\OrderBasketRepository.java
 package com.khomsi.site_project.repository;
 
-import com.khomsi.site_project.entity.OrderBasket;
-import com.khomsi.site_project.entity.Product;
-import com.khomsi.site_project.entity.User;
+import entity.com.project.ecom.OrderBasket;
+import entity.com.project.ecom.Product;
+import entity.com.project.ecom.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -1672,9 +1672,9 @@ public interface OrderBasketRepository extends JpaRepository<OrderBasket, Intege
 // main\java\com\khomsi\site_project\repository\OrderRepository.java
 package com.khomsi.site_project.repository;
 
-import com.khomsi.site_project.entity.Order;
-import com.khomsi.site_project.entity.OrderBasket;
-import com.khomsi.site_project.entity.User;
+import entity.com.project.ecom.Order;
+import entity.com.project.ecom.OrderBasket;
+import entity.com.project.ecom.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -1691,8 +1691,8 @@ public interface OrderRepository extends JpaRepository<Order, Integer> {
 // main\java\com\khomsi\site_project\repository\ProductRepository.java
 package com.khomsi.site_project.repository;
 
-import com.khomsi.site_project.entity.Category;
-import com.khomsi.site_project.entity.Product;
+import entity.com.project.ecom.Category;
+import entity.com.project.ecom.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -1741,7 +1741,7 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 // main\java\com\khomsi\site_project\repository\UserInfoRepository.java
 package com.khomsi.site_project.repository;
 
-import com.khomsi.site_project.entity.UserInfo;
+import entity.com.project.ecom.UserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserInfoRepository extends JpaRepository<UserInfo, Integer> {
@@ -1750,7 +1750,7 @@ public interface UserInfoRepository extends JpaRepository<UserInfo, Integer> {
 // main\java\com\khomsi\site_project\repository\UserRepository.java
 package com.khomsi.site_project.repository;
 
-import com.khomsi.site_project.entity.User;
+import entity.com.project.ecom.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -1768,7 +1768,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 // main\java\com\khomsi\site_project\repository\VendorRepository.java
 package com.khomsi.site_project.repository;
 
-import com.khomsi.site_project.entity.Vendor;
+import entity.com.project.ecom.Vendor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -1807,9 +1807,9 @@ public class CategoryPageInfo {
 // main\java\com\khomsi\site_project\service\CategoryService.java
 package com.khomsi.site_project.service;
 
-import com.khomsi.site_project.entity.Category;
-import com.khomsi.site_project.exception.CategoryNotFoundException;
-import com.khomsi.site_project.repository.CategoryRepository;
+import entity.com.project.ecom.Category;
+import exception.com.project.ecom.CategoryNotFoundException;
+import repository.com.project.ecom.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -2029,8 +2029,8 @@ public class CategoryService implements ICategoryService {
 // main\java\com\khomsi\site_project\service\ICategoryService.java
 package com.khomsi.site_project.service;
 
-import com.khomsi.site_project.entity.Category;
-import com.khomsi.site_project.exception.CategoryNotFoundException;
+import entity.com.project.ecom.Category;
+import exception.com.project.ecom.CategoryNotFoundException;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
@@ -2056,8 +2056,8 @@ public interface ICategoryService {
 // main\java\com\khomsi\site_project\service\IOrderBasketService.java
 package com.khomsi.site_project.service;
 
-import com.khomsi.site_project.entity.OrderBasket;
-import com.khomsi.site_project.entity.User;
+import entity.com.project.ecom.OrderBasket;
+import entity.com.project.ecom.User;
 
 import java.util.List;
 
@@ -2076,10 +2076,10 @@ public interface IOrderBasketService {
 // main\java\com\khomsi\site_project\service\IOrdersService.java
 package com.khomsi.site_project.service;
 
-import com.khomsi.site_project.entity.Order;
-import com.khomsi.site_project.entity.OrderBasket;
-import com.khomsi.site_project.entity.User;
-import com.khomsi.site_project.exception.OrderNotFoundException;
+import entity.com.project.ecom.Order;
+import entity.com.project.ecom.OrderBasket;
+import entity.com.project.ecom.User;
+import exception.com.project.ecom.OrderNotFoundException;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
@@ -2106,8 +2106,8 @@ public interface IOrdersService {
 // main\java\com\khomsi\site_project\service\IProductService.java
 package com.khomsi.site_project.service;
 
-import com.khomsi.site_project.entity.Product;
-import com.khomsi.site_project.exception.ProductNotFoundException;
+import entity.com.project.ecom.Product;
+import exception.com.project.ecom.ProductNotFoundException;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
@@ -2138,7 +2138,7 @@ public interface IProductService {
 // main\java\com\khomsi\site_project\service\IUserInfoService.java
 package com.khomsi.site_project.service;
 
-import com.khomsi.site_project.entity.UserInfo;
+import entity.com.project.ecom.UserInfo;
 
 import java.util.List;
 
@@ -2156,8 +2156,8 @@ public interface IUserInfoService {
 // main\java\com\khomsi\site_project\service\IUserService.java
 package com.khomsi.site_project.service;
 
-import com.khomsi.site_project.entity.User;
-import com.khomsi.site_project.exception.UserNotFoundException;
+import entity.com.project.ecom.User;
+import exception.com.project.ecom.UserNotFoundException;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
@@ -2186,7 +2186,7 @@ public interface IUserService {
 // main\java\com\khomsi\site_project\service\IVendorService.java
 package com.khomsi.site_project.service;
 
-import com.khomsi.site_project.entity.Vendor;
+import entity.com.project.ecom.Vendor;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
@@ -2208,11 +2208,11 @@ public interface IVendorService {
 // main\java\com\khomsi\site_project\service\OrderBasketService.java
 package com.khomsi.site_project.service;
 
-import com.khomsi.site_project.entity.OrderBasket;
-import com.khomsi.site_project.entity.Product;
-import com.khomsi.site_project.entity.User;
-import com.khomsi.site_project.repository.OrderBasketRepository;
-import com.khomsi.site_project.repository.ProductRepository;
+import entity.com.project.ecom.OrderBasket;
+import entity.com.project.ecom.Product;
+import entity.com.project.ecom.User;
+import repository.com.project.ecom.OrderBasketRepository;
+import repository.com.project.ecom.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.webjars.NotFoundException;
@@ -2287,8 +2287,8 @@ public class OrderBasketService implements IOrderBasketService {
 package com.khomsi.site_project.service;
 
 import com.khomsi.site_project.entity.*;
-import com.khomsi.site_project.exception.OrderNotFoundException;
-import com.khomsi.site_project.repository.OrderRepository;
+import exception.com.project.ecom.OrderNotFoundException;
+import repository.com.project.ecom.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -2367,9 +2367,9 @@ public class OrdersService implements IOrdersService {
 // main\java\com\khomsi\site_project\service\ProductService.java
 package com.khomsi.site_project.service;
 
-import com.khomsi.site_project.entity.Product;
-import com.khomsi.site_project.exception.ProductNotFoundException;
-import com.khomsi.site_project.repository.ProductRepository;
+import entity.com.project.ecom.Product;
+import exception.com.project.ecom.ProductNotFoundException;
+import repository.com.project.ecom.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -2505,8 +2505,8 @@ public class ProductService implements IProductService {
 // main\java\com\khomsi\site_project\service\UserInfoService.java
 package com.khomsi.site_project.service;
 
-import com.khomsi.site_project.entity.UserInfo;
-import com.khomsi.site_project.repository.UserInfoRepository;
+import entity.com.project.ecom.UserInfo;
+import repository.com.project.ecom.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -2546,9 +2546,9 @@ public class UserInfoService implements IUserInfoService {
 // main\java\com\khomsi\site_project\service\UserService.java
 package com.khomsi.site_project.service;
 
-import com.khomsi.site_project.entity.User;
-import com.khomsi.site_project.exception.UserNotFoundException;
-import com.khomsi.site_project.repository.UserRepository;
+import entity.com.project.ecom.User;
+import exception.com.project.ecom.UserNotFoundException;
+import repository.com.project.ecom.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -2659,8 +2659,8 @@ public class UserService implements IUserService {
 // main\java\com\khomsi\site_project\service\VendorService.java
 package com.khomsi.site_project.service;
 
-import com.khomsi.site_project.entity.Vendor;
-import com.khomsi.site_project.repository.VendorRepository;
+import entity.com.project.ecom.Vendor;
+import repository.com.project.ecom.VendorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -22572,8 +22572,8 @@ but can be also used in another admin pages if you modify code to sort and searc
 // test\java\com\khomsi\site_project\CategoryRepoTest.java
 package com.khomsi.site_project;
 
-import com.khomsi.site_project.entity.Category;
-import com.khomsi.site_project.repository.CategoryRepository;
+import entity.com.project.ecom.Category;
+import repository.com.project.ecom.CategoryRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -22618,8 +22618,8 @@ public class CategoryRepoTest {
 // test\java\com\khomsi\site_project\CategoryTest.java
 package com.khomsi.site_project;
 
-import com.khomsi.site_project.entity.Category;
-import com.khomsi.site_project.repository.CategoryRepository;
+import entity.com.project.ecom.Category;
+import repository.com.project.ecom.CategoryRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -22685,10 +22685,10 @@ public class CategoryTest {
 // test\java\com\khomsi\site_project\OrderBasketTests.java
 package com.khomsi.site_project;
 
-import com.khomsi.site_project.entity.OrderBasket;
-import com.khomsi.site_project.entity.Product;
-import com.khomsi.site_project.entity.User;
-import com.khomsi.site_project.repository.OrderBasketRepository;
+import entity.com.project.ecom.OrderBasket;
+import entity.com.project.ecom.Product;
+import entity.com.project.ecom.User;
+import repository.com.project.ecom.OrderBasketRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -22763,8 +22763,8 @@ public class OrderBasketTests {
 package com.khomsi.site_project;
 
 
-import com.khomsi.site_project.entity.Product;
-import com.khomsi.site_project.repository.ProductRepository;
+import entity.com.project.ecom.Product;
+import repository.com.project.ecom.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -22792,10 +22792,10 @@ public class ProductRepositoryTest {
 // test\java\com\khomsi\site_project\ProductTest.java
 package com.khomsi.site_project;
 
-import com.khomsi.site_project.entity.Category;
-import com.khomsi.site_project.entity.Product;
-import com.khomsi.site_project.entity.Vendor;
-import com.khomsi.site_project.repository.ProductRepository;
+import entity.com.project.ecom.Category;
+import entity.com.project.ecom.Product;
+import entity.com.project.ecom.Vendor;
+import repository.com.project.ecom.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -22893,8 +22893,8 @@ public class ProductTest {
 // test\java\com\khomsi\site_project\UserTest.java
 package com.khomsi.site_project;
 
-import com.khomsi.site_project.entity.User;
-import com.khomsi.site_project.repository.UserRepository;
+import entity.com.project.ecom.User;
+import repository.com.project.ecom.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
