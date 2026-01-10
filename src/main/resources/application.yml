@@ -1,8 +1,10 @@
 spring:
   datasource:
       username: root
-      url: jdbc:mysql://localhost:3306/ecom_project?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-      password: Khan@786
+#      url: jdbc:mysql://localhost:3306/ecom_project?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      url: jdbc:mysql://mysql.railway.internal:3306/railway?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      password: dsuBKgsNgqWByQtochCssOIMttdLnEeD
+#      password: Khan@786
   jpa:
     properties:
       hibernate:
