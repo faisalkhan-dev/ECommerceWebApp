@@ -14,14 +14,13 @@ RUN mvn clean package -DskipTests
 
 
 # Step 2: Use lightweight JDK image to run the built JAR
-FROM openjdk:17-jdk-slim
+FROM openjdk:17-jdk
 
 # Set work directory inside the container
 WORKDIR /app
 
 # Copy only the built JAR from the previous stage
 COPY --from=builder /app/target/site_project-0.0.1-SNAPSHOT.jar .
-
 
 # Set environment variable for port (optional)
 ENV PORT=8080
