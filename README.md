@@ -36,6 +36,12 @@ https://github.com/user-attachments/assets/5b252f0b-7d08-4e1e-95a3-c44267fcf67b
 
 This E-commerce project built on Spring Boot & Thymeleaf.<br>
 
+GO LIVE: https://ecommercewebapp-vs4u.onrender.com/
+Login As Admin : username:admin123 and password:admin123
+Login As User(already exist) : username:user2 and password:user@2
+Note: You also can create account
+
+->FOR LOCALLY
 -> Update your MySQL configuartion in application.yml
 > Run this command to add admin in your MySQl
 >   INSERT INTO user (email, login, password, role)
