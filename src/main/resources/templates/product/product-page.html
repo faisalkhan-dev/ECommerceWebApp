@@ -3,25 +3,17 @@
 >
 <head th:replace="blocks/fragments :: head('Product page - SENKO', 'none')"></head>
 <body>
-<!--NavBar-->
 <div th:replace="blocks/fragments :: navbar"></div>
 
-<!--Main layout-->
 <main class="container-fluid">
     <div th:replace="blocks/breadcrumb :: content"></div>
     <div class="container dark-grey-text mt-5">
-        <!--Grid row-->
         <div class="row wow fadeIn">
-            <!--Grid column-->
             <div class="col-md-6 mb-4">
                 <img th:src="'/product-images/'+${product.imageURL}" class="img-fluid rounded" width="300"/>
             </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
             <div class="col-md-6 mb-4">
 
-                <!--Content-->
                 <div class="p-4">
                     <div>
                         <h2>[[${product.title}]]</h2>
@@ -33,7 +25,7 @@
                         <span class="badge blue mr-1">[[#{admin.product.vendor}]]: [[${product.vendor.title}]]</span>
                     </div>
                     <p class="lead">
-                        <h4><strong>[[#{admin.product.price}]]: [[${product.price}]] &#8372;</strong> </h4>
+                    <h4><strong>[[#{admin.product.price}]]: [[${product.price}]] &#8372;</strong> </h4>
                     </p>
 
                     <p class="lead font-weight-bold">[[#{admin.product.shortDescription}]]:</p>
@@ -41,7 +33,7 @@
                     <p th:utext="${product.description}"></p>
 
                     <div class="d-flex justify-content-left">
-                        <div th:replace="/blocks/fragments :: quantity_control(1, ${product.id})"
+                        <div th:replace="~{blocks/fragments :: quantity_control(1, ${product.id})}"
                              style="max-width: 3rem">
                         </div>
                         <div>
@@ -54,19 +46,10 @@
 
 
                 </div>
-                <!--Content-->
-
             </div>
-            <!--Grid column-->
-
         </div>
-        <!--Grid row-->
-
     </div>
 </main>
-<!--Main layout-->
-
-<!--Scripts-->
 <div th:insert="~{blocks/fragments :: scripts}"></div>
 <script type="text/javascript">
     var productId = "[[${product.id}]]";
@@ -75,10 +58,94 @@
 <script th:src="@{/js/quantity_control.js}"></script>
 <script th:src="@{/js/added_to_cart.js}"></script>
 
-<!-- Modal section-->
 <div th:replace="blocks/fragments :: showModal"></div>
-<!--Footer-->
 <footer th:insert="~{blocks/fragments :: footer}"></footer>
 </body>
 
 </html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"-->
+<!--&gt;-->
+<!--<head th:replace="blocks/fragments :: head('Product page - SENKO', 'none')"></head>-->
+<!--<body>-->
+<!--&lt;!&ndash;NavBar&ndash;&gt;-->
+<!--<div th:replace="blocks/fragments :: navbar"></div>-->
+
+<!--&lt;!&ndash;Main layout&ndash;&gt;-->
+<!--<main class="container-fluid">-->
+<!--    <div th:replace="blocks/breadcrumb :: content"></div>-->
+<!--    <div class="container dark-grey-text mt-5">-->
+<!--        &lt;!&ndash;Grid row&ndash;&gt;-->
+<!--        <div class="row wow fadeIn">-->
+<!--            &lt;!&ndash;Grid column&ndash;&gt;-->
+<!--            <div class="col-md-6 mb-4">-->
+<!--                <img th:src="'/product-images/'+${product.imageURL}" class="img-fluid rounded" width="300"/>-->
+<!--            </div>-->
+<!--            &lt;!&ndash;Grid column&ndash;&gt;-->
+
+<!--            &lt;!&ndash;Grid column&ndash;&gt;-->
+<!--            <div class="col-md-6 mb-4">-->
+
+<!--                &lt;!&ndash;Content&ndash;&gt;-->
+<!--                <div class="p-4">-->
+<!--                    <div>-->
+<!--                        <h2>[[${product.title}]]</h2>-->
+<!--                    </div>-->
+<!--                    <div class="mb-3">-->
+<!--                        <a th:href="@{'/category/'+ ${product.category.alias}}">-->
+<!--                            <span class="badge purple mr-1">[[#{admin.product.category}]]: [[${product.category.title}]]</span>-->
+<!--                        </a>-->
+<!--                        <span class="badge blue mr-1">[[#{admin.product.vendor}]]: [[${product.vendor.title}]]</span>-->
+<!--                    </div>-->
+<!--                    <p class="lead">-->
+<!--                        <h4><strong>[[#{admin.product.price}]]: [[${product.price}]] &#8372;</strong> </h4>-->
+<!--                    </p>-->
+
+<!--                    <p class="lead font-weight-bold">[[#{admin.product.shortDescription}]]:</p>-->
+
+<!--                    <p th:utext="${product.description}"></p>-->
+
+<!--                    <div class="d-flex justify-content-left">-->
+<!--                        <div th:replace="/blocks/fragments :: quantity_control(1, ${product.id})"-->
+<!--                             style="max-width: 3rem">-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <button class="productBtn my-0 rounded" type="submit" id="addToCartBtn">-->
+<!--                                <i class="fas fa-shopping-cart ml-1"></i>-->
+<!--                                [[#{product.addToCartBtn}]]-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+
+<!--                </div>-->
+<!--                &lt;!&ndash;Content&ndash;&gt;-->
+
+<!--            </div>-->
+<!--            &lt;!&ndash;Grid column&ndash;&gt;-->
+
+<!--        </div>-->
+<!--        &lt;!&ndash;Grid row&ndash;&gt;-->
+
+<!--    </div>-->
+<!--</main>-->
+<!--&lt;!&ndash;Main layout&ndash;&gt;-->
+
+<!--&lt;!&ndash;Scripts&ndash;&gt;-->
+<!--<div th:insert="~{blocks/fragments :: scripts}"></div>-->
+<!--<script type="text/javascript">-->
+<!--    var productId = "[[${product.id}]]";-->
+<!--    var productName = "[[${product.title}]]";-->
+<!--</script>-->
+<!--<script th:src="@{/js/quantity_control.js}"></script>-->
+<!--<script th:src="@{/js/added_to_cart.js}"></script>-->
+
+<!--&lt;!&ndash; Modal section&ndash;&gt;-->
+<!--<div th:replace="blocks/fragments :: showModal"></div>-->
+<!--&lt;!&ndash;Footer&ndash;&gt;-->
+<!--<footer th:insert="~{blocks/fragments :: footer}"></footer>-->
+<!--</body>-->
+
+<!--</html>-->
